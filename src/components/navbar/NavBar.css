@@ -1,0 +1,111 @@
+.NavBar-Items {
+  background: #0075ff;
+  background: linear-gradient(90deg, #0075ff 30%, #0075ff 50%);
+  background: -webkit-linear-gradient(90deg, #0075ff 30%, #0075ff 50%);
+  background: -moz-linear-gradient(90deg, #0075ff 30%, #0075ff 50%);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.NavBar-logo {
+  color: white;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.fa-cuttlefish {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  color: #f9fcff;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vh;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: white;
+}
+
+.menue-icon {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .NavBar-Items {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav-menu.active {
+    background: #0075ff;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5 ease;
+    z-index: 1;
+  }
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+  .nav-links:hover{
+background:black;
+border-radius: 0;
+  }
+.NavBar-logo{
+position:absolute;
+top: 0;
+left: 0;
+transform: translate(20%,50%)
+}
+.menue-icon {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 0;
+  transform: translate(-100%,50%);
+  font-size:1.8rem;
+}
+.fa-times{
+color: white;
+font-size: 2rem
+}
+.fa-cuttlefish {
+  margin-left: 0.5rem;
+  font-size: 31px;
+}
+}
